@@ -1,0 +1,14 @@
+[includeIf "gitdir:~/projects/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/work/"]
+  path = ~/.gitconfig-work
+
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
+[push]
+	default = current
+[user]
+	email = rubeckcurtis@gmail.com
+	name = Curtis Rubeck
