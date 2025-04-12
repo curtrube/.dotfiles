@@ -12,3 +12,5 @@
 [user]
 	email = rubeckcurtis@gmail.com
 	name = Curtis Rubeck
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
