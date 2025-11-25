@@ -1,0 +1,160 @@
+{
+ "Week": "2025-11-10",
+ "LastWeek": "",
+ "X": 0.796733520366113,
+ "Programs": [
+  {
+   "Program": "cmd/asm",
+   "Version": "devel",
+   "GoVersion": "devel",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "asm/flag:D": 16,
+    "asm/flag:I": 16,
+    "asm/flag:gensymabis": 7,
+    "asm/flag:o": 16,
+    "asm/flag:p": 16,
+    "asm/flag:trimpath": 16,
+    "asm/invocations": 16
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/cgo",
+   "Version": "devel",
+   "GoVersion": "devel",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {},
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/compile",
+   "Version": "devel",
+   "GoVersion": "devel",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "compile/flag:asmhdr": 7,
+    "compile/flag:buildid": 202,
+    "compile/flag:c": 202,
+    "compile/flag:complete": 195,
+    "compile/flag:dwarf": 9,
+    "compile/flag:embedcfg": 2,
+    "compile/flag:goversion": 202,
+    "compile/flag:importcfg": 202,
+    "compile/flag:lang": 202,
+    "compile/flag:nolocalimports": 202,
+    "compile/flag:o": 202,
+    "compile/flag:p": 202,
+    "compile/flag:pack": 202,
+    "compile/flag:std": 9,
+    "compile/flag:symabis": 7,
+    "compile/flag:trimpath": 202,
+    "compile/invocations": 275
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/go",
+   "Version": "devel",
+   "GoVersion": "devel",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "go/buildcache/hit": 16812,
+    "go/buildcache/miss": 2624,
+    "go/buildcache/stdlib-recompiled": 30,
+    "go/env/flag:json": 52,
+    "go/goroot:usr-lib-go": 549,
+    "go/invocations": 549,
+    "go/list/flag:compiled": 62,
+    "go/list/flag:deps": 62,
+    "go/list/flag:e": 180,
+    "go/list/flag:export": 62,
+    "go/list/flag:f": 179,
+    "go/list/flag:find": 62,
+    "go/list/flag:json": 92,
+    "go/list/flag:m": 60,
+    "go/list/flag:mod": 30,
+    "go/list/flag:overlay": 100,
+    "go/list/flag:pgo": 62,
+    "go/list/flag:test": 62,
+    "go/mod-tidy/flag:modfile": 95,
+    "go/mode:gopath": 88,
+    "go/mode:module": 461,
+    "go/platform/host/linux/major-version:6": 549,
+    "go/platform/host/linux/version:6-17": 549,
+    "go/platform/target/goamd64:v1": 549,
+    "go/platform/target/goarch:amd64": 549,
+    "go/platform/target/goos:linux": 549,
+    "go/subcommand:env": 136,
+    "go/subcommand:get": 2,
+    "go/subcommand:list": 271,
+    "go/subcommand:mod-init": 1,
+    "go/subcommand:mod-tidy": 98,
+    "go/subcommand:run": 5,
+    "go/subcommand:test": 9,
+    "go/subcommand:version": 27
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "golang.org/x/tools/gopls",
+   "Version": "v0.20.0",
+   "GoVersion": "devel",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "gopls/client:neovim": 27,
+    "gopls/completion/latency:\u003c100ms": 6,
+    "gopls/completion/latency:\u003c10ms": 548,
+    "gopls/completion/latency:\u003c200ms": 3,
+    "gopls/completion/latency:\u003c50ms": 174,
+    "gopls/completion/len:0": 417,
+    "gopls/completion/len:\u003c=10": 222,
+    "gopls/completion/len:\u003e10": 92,
+    "gopls/completion/used:no": 368,
+    "gopls/completion/used:yes": 3,
+    "gopls/definition/latency:\u003c10ms": 5,
+    "gopls/gotoolchain:auto": 27,
+    "gopls/goversion:1.25": 27,
+    "gopls/hover/latency:\u003c10ms": 17,
+    "gopls/telemetryprompt/attempts:0": 27
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/link",
+   "Version": "devel",
+   "GoVersion": "devel",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "link/flag:X": 9,
+    "link/flag:buildid": 10,
+    "link/flag:buildmode": 10,
+    "link/flag:extld": 10,
+    "link/flag:importcfg": 10,
+    "link/flag:o": 10,
+    "link/flag:s": 10,
+    "link/flag:w": 10,
+    "link/invocations": 69
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/vet",
+   "Version": "devel",
+   "GoVersion": "devel",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "vet/invocations": 395
+   },
+   "Stacks": {}
+  }
+ ],
+ "Config": "v0.0.0-0"
+}
