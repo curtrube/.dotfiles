@@ -223,7 +223,7 @@ return {
 				cssls = {},
 				emmet_language_server = {},
 				gopls = {},
-				pyright = {},
+				basedpyright = {},
 				html = {},
 				jsonls = {},
 				yamlls = {},
