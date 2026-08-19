@@ -27,5 +27,8 @@ lazy.setup({
 		enabled = true,
 		notify = true,
 	},
-	checker = { enabled = true },
+	checker = {
+		enabled = true,
+		notify = false,
+	},
 })
