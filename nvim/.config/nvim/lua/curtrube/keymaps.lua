@@ -33,7 +33,11 @@ vim.keymap.set(
 	{ desc = "Replace word cursor is on globally" }
 )
 
+-- Restart nvim
 vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>", { desc = "Restart config :restart)" })
+
+-- Swap between last two buffers
+vim.keymap.set("n", "<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 
 -- split management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
@@ -67,3 +71,8 @@ local hover = function()
 end
 
 vim.keymap.set("n", "K", hover, { desc = "LSP: Signature help", buffer = buffer_number })
+
+-- Map Oil to <leader>e
+vim.keymap.set("n", "<leader>e", function()
+	require("oil").toggle_float()
+end, { desc = "Toggle Oil file explorer" })
