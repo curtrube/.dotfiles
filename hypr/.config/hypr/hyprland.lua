@@ -26,6 +26,14 @@ hl.monitor({
 	scale = "1.25",
 })
 
+-- Dell 27" 4k
+hl.monitor({
+	output = "DP-3",
+	mode = "3840x2160",
+	position = "-2304x0@60",
+	scale = "1.666667",
+})
+
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -49,6 +57,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("mako")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("hyprpolkitagent")
+	hl.exec_cmd("swayosd-server")
 end)
 
 -------------------------------
