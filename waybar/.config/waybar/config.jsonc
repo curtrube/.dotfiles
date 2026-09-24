@@ -22,20 +22,29 @@
         "network"
     ],
     "hyprland/workspaces": {
-        "disable-scroll": false,
-        "all-outputs": false,
-        "warp-on-scroll": false,
+        "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": "○",
-            "urgent": ""
+            "default": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0",
+            "active": "󱓻"
         },
         "persistent-workspaces": {
-            "*": 4
-        },
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1"
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
     },
     "clock": {
         "interval": 60,
