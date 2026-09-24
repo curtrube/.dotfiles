@@ -68,6 +68,7 @@ sudo pacman -Syu --needed --noconfirm \
     bash-completion
     kitty
     tmux
+    starship
     tree-sitter-cli
     neovim
     jq
@@ -80,7 +81,7 @@ sudo pacman -Syu --needed --noconfirm \
     tldr
     postgresql-libs
 
-    docker
+docker
 docker-buildx
 docker-compose
 
