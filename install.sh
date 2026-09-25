@@ -53,14 +53,19 @@ sudo pacman -Syu --needed --noconfirm \
     playerctl 
     grim
     slurp
+    satty
 
     waybar
     wofi
+    libnotify
     mako
     swayosd
     swaybg
 
-    wl-clipboard \
+    wl-clipboard
+    imv
+    zathura
+    zathura-pdf-poppler
 
 
 # user tools
@@ -90,7 +95,7 @@ docker-compose
 
 firefox
 obsidian
-spotify
+spotify-launcher
 
 
      gnome-keyring \

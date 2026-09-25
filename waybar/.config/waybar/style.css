@@ -28,19 +28,60 @@ window#waybar {
   padding: 0 4px;
 }
 
+@define-color bg-window #1e2030;
+@define-color bg-current-workspace #a6da95;
+@define-color bg-alt #181926;
+@define-color active-workspace-text #181926;
+@define-color text-normal #cdd6f4;
+@define-color text-muted #949cbb;
+
+@define-color green #a6da95;
+@define-color flamingo #f2cdcd;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color sky #89dceb;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+/* Workspaces */
 #workspaces {
-  margin: 0 2px;
+  background-color: transparent;
+  margin: 2px 1px 3px 1px;
+  padding: 0px 1px;
+  border: 0px;
 }
 
 #workspaces button {
-  padding: 1px 4px;
-  color: @text-dim;
-  background: transparent;
-  border-radius: 6px;
-  transition: all 0.18s ease;
-  font-size: 15px;
+  color: @text-normal;
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
 }
 
+#workspaces button.active {
+  background: @bg-current-workspace;
+  color: @active-workspace-text;
+  border-radius: 15px;
+}
+
+#workspaces button:hover {
+  color: @green;
+  background-color: @bg-alt;
+}
 
 #clock {
   color: @text;

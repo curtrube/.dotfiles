@@ -69,6 +69,22 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
+-- Force all apps to use Wayland.
+hl.env("GDK_BACKEND", "wayland,x11,*")
+hl.env("QT_QPA_PLATFORM", "wayland;xcb")
+hl.env("QT_QPA_PLATFORMTHEME", "gtk3")
+hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
+hl.env("OZONE_PLATFORM", "wayland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+
+-- Allow better support for screen sharing (Google Meet, Discord, etc).
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+
+hl.env("GDK_SCALE", 1)
+hl.env("GDK_DPI_SCALE", 1)
+
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
@@ -82,6 +98,15 @@ hl.env("HYPRCURSOR_SIZE", "24")
 --     enforce_permissions = true,
 --   },
 -- })
+hl.config({
+	xwayland = {
+		force_zero_scaling = true,
+	},
+
+	ecosystem = {
+		no_update_news = true,
+	},
+})
 
 -- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 -- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
@@ -95,9 +120,9 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({
 	general = {
 		gaps_in = 5,
-		gaps_out = 20,
+		gaps_out = 5,
 
-		border_size = 2,
+		border_size = 1,
 
 		col = {
 			active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
@@ -282,6 +307,8 @@ hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
+
+hl.bind(" + PRINT", hl.dsp.exec_cmd("~/code/.dotfiles/bin/capture-screenshot"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
