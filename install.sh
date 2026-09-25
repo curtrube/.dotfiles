@@ -14,6 +14,7 @@ sudo pacman -Syu --needed --noconfirm \
     hyprlock
     hyprsunset
     hyprcursor
+    hyprpicker
     hyprland-preview-share-picker
     uwsm
 
@@ -66,6 +67,8 @@ sudo pacman -Syu --needed --noconfirm \
     imv
     zathura
     zathura-pdf-poppler
+    xournalpp
+    rnote
 
 
 # user tools
@@ -98,7 +101,6 @@ obsidian
 spotify-launcher
 
 
-     gnome-keyring \
     waybar wofi nautilus dunst kitty neovim jq unzip \
     firefox
 
