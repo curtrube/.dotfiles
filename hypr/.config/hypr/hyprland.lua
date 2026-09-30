@@ -348,29 +348,66 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+-- Only display the OSD on the currently focused monitor.
+local function osdclient(args)
+	local monitor = hl.get_active_monitor()
+
+	if not monitor then
+		return
+	end
+
+	local cmd = string.format("swayosd-client --monitor %q %s", monitor.name, args)
+
+	hl.exec_cmd(cmd)
+end
+
+hl.bind("XF86AudioRaiseVolume", function()
+	osdclient("--output-volume raise")
+end, { locked = true, repeating = true })
+
+hl.bind("XF86AudioLowerVolume", function()
+	osdclient("--output-volume lower")
+end, { locked = true, repeating = true })
+
+hl.bind("XF86AudioMute", function()
+	osdclient("--output-volume mute-toggle")
+end, { locked = true })
+
+hl.bind("XF86AudioMicMute", function()
+	osdclient("--input-volume mute-toggle")
+end, { locked = true })
+
 -- Laptop multimedia keys for volume and LCD brightness
-hl.bind(
-	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMicMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+--hl.bind(
+--	"XF86AudioRaiseVolume",
+--	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+--	{ locked = true, repeating = true }
+--)
+--hl.bind(
+--	"XF86AudioLowerVolume",
+--	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+--	{ locked = true, repeating = true }
+--)
+--hl.bind(
+--	"XF86AudioMute",
+--	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+--	{ locked = true, repeating = true }
+--)
+--hl.bind(
+--	"XF86AudioMicMute",
+--	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+--	{ locked = true, repeating = true }
+--)
+--hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
+--hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+
+hl.bind("XF86MonBrightnessUp", function()
+	osdclient("--brightness raise")
+end, { locked = true, repeating = true })
+
+hl.bind("XF86MonBrightnessDown", function()
+	osdclient("--brightness lower")
+end, { locked = true, repeating = true })
 
 -- Requires playerctl
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
