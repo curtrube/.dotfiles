@@ -33,6 +33,10 @@ vim.keymap.set(
 	{ desc = "Replace word cursor is on globally" }
 )
 
+-- Insert Mode --
+vim.keymap.set("i", "jj", "<esc>", { desc = "Exit insert mode (jj)" })
+vim.keymap.set("i", "JJ", "<esc>", { desc = "Exit insert mode (JJ)" })
+
 -- Restart nvim
 vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>", { desc = "Restart config :restart)" })
 
