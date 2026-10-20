@@ -30,7 +30,7 @@ hl.monitor({
 hl.monitor({
 	output = "DP-3",
 	mode = "3840x2160",
-	position = "-2304x0@60",
+	position = "auto-right",
 	scale = "1.666667",
 })
 
