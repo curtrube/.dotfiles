@@ -302,7 +302,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
--- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Move focus with mainMod + h/j/k/l keys
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
@@ -349,6 +349,15 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Expand window left
+hl.bind(mainMod .. " + T", hl.dsp.window.resize({ x = -100, y = 0, relative = true }))
+-- Shrink window left
+hl.bind(mainMod .. " + Y", hl.dsp.window.resize({ x = 100, y = 0, relative = true }))
+-- Shrink window up
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
+-- Expand window down
+hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
 
 -- Only display the OSD on the currently focused monitor.
 local function osdclient(args)
