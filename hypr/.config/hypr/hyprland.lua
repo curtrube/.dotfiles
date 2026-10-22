@@ -351,13 +351,13 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Expand window left
-hl.bind(mainMod .. " + T", hl.dsp.window.resize({ x = -100, y = 0, relative = true }))
+hl.bind(mainMod .. " + code:20", hl.dsp.window.resize({ x = -100, y = 0, relative = true }))
 -- Shrink window left
-hl.bind(mainMod .. " + Y", hl.dsp.window.resize({ x = 100, y = 0, relative = true }))
+hl.bind(mainMod .. " + code:21", hl.dsp.window.resize({ x = 100, y = 0, relative = true }))
 -- Shrink window up
-hl.bind(mainMod .. " + SHIFT + T", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
+hl.bind(mainMod .. " + SHIFT + code:20", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
 -- Expand window down
-hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
+hl.bind(mainMod .. " + SHIFT + code:21", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
 
 -- Only display the OSD on the currently focused monitor.
 local function osdclient(args)
