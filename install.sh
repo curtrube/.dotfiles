@@ -92,6 +92,8 @@ sudo pacman -Syu --needed --noconfirm \
 docker
 docker-buildx
 docker-compose
+kind
+kubectl
 
 1password
 1password-cli
@@ -114,10 +116,9 @@ spotify-launcher
     grim slurp wf-recorder hyprsunset brightnessctl playerctl wl-clipboard
 
 echo "==> Enabling network manager"
-sudo systemctl enable --now NetworkManager.service iwd.service bluetooth.service upower.service
+sudo systemctl enable --now NetworkManager.service bluetooth.service upower.service
 
-# /etc/NetworkManager/NetworkManager.conf
-
+# /etc/NetworkManager/conf.d/wifi_backend.conf
 [device]
 wifi.backend=iwd
 
