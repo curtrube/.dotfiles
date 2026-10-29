@@ -35,3 +35,5 @@
 	autoupdate = true        # Apply stored conflict resolutions automatically
 [core]
 	editor = vim
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
