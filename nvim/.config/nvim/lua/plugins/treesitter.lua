@@ -8,9 +8,9 @@ local parser_languages = {
 	"lua",
 	"markdown",
 	"markdown_inline",
-    "python",
+	"python",
 	"rust",
-    "sql",
+	"sql",
 	"svelte",
 	"terraform",
 	"tsx",
@@ -24,13 +24,13 @@ local function install_missing_parsers()
 	local treesitter = require("nvim-treesitter")
 	local installed = {}
 
-    -- start the highlighter on these types
-    vim.api.nvim_create_autocmd("FileType", {
-        pattern = parser_languages,
-        callback = function()
-            vim.treesitter.start()
-        end,
-    })
+	-- start the highlighter on these types
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = parser_languages,
+		callback = function()
+			vim.treesitter.start()
+		end,
+	})
 
 	for _, language in ipairs(treesitter.get_installed()) do
 		installed[language] = true
@@ -89,4 +89,3 @@ return {
 		end,
 	},
 }
-
